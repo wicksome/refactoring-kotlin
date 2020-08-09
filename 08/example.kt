@@ -21,11 +21,8 @@ fun acquireData(input: String): List<Office> {
     var firstLine = true
     val result = mutableListOf<Office>()
     val loopItems = lines
+        .drop(1)
     for (line in loopItems) {
-        if (firstLine) {
-            firstLine = false
-            continue
-        }
         if (line.trim() === "") continue
         val record = line.split(",")
         if (record[1].trim() == "India") {
