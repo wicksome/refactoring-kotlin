@@ -17,10 +17,10 @@ fun main() {
 }
 
 fun acquireData(input: String): List<Office> {
-    val lines = input.split("\n") // collection
+    val lines = input.split("\n")
     var firstLine = true
     val result = mutableListOf<Office>()
-    for (line in lines) { // loop
+    for (line in lines) {
         if (firstLine) {
             firstLine = false
             continue
