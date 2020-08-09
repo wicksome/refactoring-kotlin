@@ -20,7 +20,8 @@ fun acquireData(input: String): List<Office> {
     val lines = input.split("\n")
     var firstLine = true
     val result = mutableListOf<Office>()
-    for (line in lines) {
+    val loopItems = lines
+    for (line in loopItems) {
         if (firstLine) {
             firstLine = false
             continue
