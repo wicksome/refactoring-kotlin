@@ -22,8 +22,8 @@ fun acquireData(input: String): List<Office> {
     val result = mutableListOf<Office>()
     val loopItems = lines
         .drop(1)
+        .filter { it.isBlank() }
     for (line in loopItems) {
-        if (line.trim() === "") continue
         val record = line.split(",")
         if (record[1].trim() == "India") {
             result += Office(city = record[0].trim(), phone = record[2].trim())
